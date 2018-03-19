@@ -1,0 +1,33 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, Perl, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+ 
+#define TEMP_WRZENIA 100
+#define TEMP_ZAMARZANIA 0
+ 
+int main()
+{
+    int temp;
+    printf("Podaj temperaturne w stopniach Celcjusza:");
+    scanf("%d", &temp);
+ 
+    if(temp>TEMP_WRZENIA)
+    {
+        printf("Stan Gazowy");
+    }
+    else if(temp<TEMP_ZAMARZANIA)
+    {
+        printf("Stan Stały");
+    }
+    else
+    {
+        printf("Stan Ciekły");
+    }
+ 
+    return 0;
+}
