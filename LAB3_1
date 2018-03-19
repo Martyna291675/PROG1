@@ -1,0 +1,49 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+#include <limits.h>
+#include <float.h>
+
+int main()
+{
+    int wiek=20;
+    short int ilosc_szklanek1=8;
+    long int ilosc_szklanek2=5;
+    signed int pietro=-4;
+    unsigned int pietro2=5;
+    char punkt='e';
+    signed char liczba=124;
+    float temperatura_wody=38.6f;
+    double wysokosc=1.5687;
+    long double wysokosc2=2.1111;
+    short punkty=6;
+    signed short sid=-9;
+    signed short int der=-7;
+    unsigned short int das=1;
+    signed die=-2;
+    
+    
+    printf ("Zmienna int wiek ma rozmiar: %dB, najmniejsza wartosc to %d, najwieksza wartosc to %d\n", sizeof(wiek),INT_MIN,INT_MAX);
+    printf ("Zmienna short int ma rozmiar: %dB\n, najmniejsza wartosc to %d, najwieksza wartosc to %d\n", sizeof(ilosc_szklanek1), SHRT_MIN,SHRT_MAX);
+    printf ("Zmienna long int ma rozmiar: %dB\n, najmniejsza wartosc to %d, najwieksza wartosc to %d\n", sizeof(ilosc_szklanek2),LONG_MIN,LONG_MAX);
+    printf ("Zmienna signed int ma rozmiar: %dB\n", sizeof(pietro));
+    printf ("Zmienna unsigned int ma rozmiar: %dB\n, najmniejsza wartosc to %d, najwieksza wartosc to %d\n",sizeof(pietro2),UINT_MAX);
+    printf ("Zmienna char ma rozmiar: %dB\n, najmniejsza wartosc to %d, najwieksza wartosc to %d\n", sizeof(punkt),CHAR_MIN,CHAR_MAX);
+    printf ("Zmienna signed char ma rozmiar: %dB\n, najmniejsza wartosc to %d, najwieksza wartosc to %d\n", sizeof(liczba),SCHAR_MIN,SCHAR_MAX);
+    printf ("Zmienna float ma rozmier: %dB\n, najmniejsza wartosc to %d, najwieksza wartosc to %d\n", sizeof (temperatura_wody),FLT_MIN,FLT_MAX);
+    printf ("Zmienna double ma rozmiar: %dB\n, najmniejsza wartosc to %d, najwieksza wartosc to %d\n", sizeof (wysokosc),DBL_MIN,DBL_MAX); 
+    printf ("Zmienna long double ma rozmiar: %dB\n, najmniejsza wartosc to %d, najwieksza wartosc to %d\n", sizeof(wysokosc2),LDBL_MIN,LDBL_MAX);
+    printf ("Zmienna short ma rozmiar: %dB\n, najmniejsza wartosc to %d, najwieksza wartosc to %d\n",sizeof(punkty),SHRT_MIN,SHRT_MAX);
+    printf ("Zmienna signed short ma rozmiar: %dB\n", sizeof(sid));
+    printf ("Zmienna signed short int ma rozmiar: %dB\n", sizeof(der));
+    printf ("Zmienna unsigned short int ma rozmiar: %dB\n, najwieksza wartosc to %d\n",sizeof(das),USHRT_MAX);
+    printf ("Zmienna signed ma rozmiar: %dB\n", sizeof(die));
+    
+    return 0;
+}
