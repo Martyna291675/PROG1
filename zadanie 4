@@ -4,6 +4,7 @@ int main()
 {
     int pensja,punkty;
     int premia=0;
+    char taklubnie='y';
     printf("podaj pensje");
     scanf("%d",&pensja);
     printf("podaj liczbe punktow");
@@ -27,6 +28,7 @@ int main()
     {premia=premia+(premia*1.3);
     printf("l%d", premia);
     }
+    while(taklubnie=='y');
     
     return 0;
 }
