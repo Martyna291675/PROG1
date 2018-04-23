@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+    int pensja,punkty;
+    int premia=0;
+    printf("podaj pensje");
+    scanf("%d",&pensja);
+    printf("podaj liczbe punktow");
+    scanf("%d", &punkty);
+    
+    premia=pensja*0.05;
+    if((punkty>=0)&&(punkty<=40))
+    {
+        premia=premia+(premia*0.2);
+        printf("%d", premia);
+    }
+    if((punkty>=41)&&(punkty<=65))
+    {premia=premia+(premia*0.5);
+    printf("%d", premia);
+    }
+    if((punkty>=66)&&(punkty<=90))
+    {premia=premia+(premia*0.9);
+    printf("%d", premia);
+    }
+    if ((punkty>=91)&&(punkty<=100))
+    {premia=premia+(premia*1.3);
+    printf("l%d", premia);
+    }
+    
+    return 0;
+}
