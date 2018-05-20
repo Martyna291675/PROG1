@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+float metryTOjardy(float distance)
+{
+    return distance/0.9144;
+}
+float jardyTOstopy(float distance)
+{
+    return distance*3;
+}
+int main()
+{
+    int choice;
+    float value;
+    printf("Wpisz 0 aby przeliczyc metry na jardy; wybierz 1 aby przeliczyc jardy na stopy: ");
+    scanf("%d", &choice);
+    printf("Wpisz dlugosc: ");
+    scanf("%f", &value);
+    if (choice == 0)
+        printf("%.2f m to %.2f yd.\n", value, metryTOjardy(value));
+        else if (choice == 1)
+            printf("%.2f yd to %.2f ft.\n", value, jardyTOstopy(value));
+        else
+            printf("Złe polecenie.\n");
+    return 0;
+}
