@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int sumaElementow(int tab[], int size)
+{
+    int i, suma=0;
+    for (i = 0 ; i < size ; i++)
+        suma = suma + tab[i];
+    return suma;
+}
+int main()
+{
+    int tab[10], suma = 0;
+    int i;
+    int size = sizeof(tab)/sizeof(int);
+    for (i = 0 ; i < size ; i++)
+    
+    {
+        scanf("%d", &tab[i]);
+        suma = suma+tab[i];
+    }
+   
+    printf ("srednia 1: %d\n", suma/size);
+    printf ("srednia 2: %d\n", sumaElementow(tab,size)/size);
+    return 0;
+}
