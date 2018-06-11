@@ -2,28 +2,37 @@
 
 int main()
 {
-    int tab1[10] = {1,3,5,7,9,11,13,15,17,19};
+    int tab1[10];
+    int tab2[10];
     int i;
     int rozmiarTablicy1;
     rozmiarTablicy1 = sizeof(tab1)/sizeof(int);
     printf("Rozmiar tablicy 1 to %d\n",rozmiarTablicy1);
-    
+     for(i=0;i<rozmiarTablicy1;i++){
+       tab1[i]=i*2;
+       tab2[i]=i*2+1;
+    }
     int sumaElementow=0;
     for(i=0;i<rozmiarTablicy1;i++){
         sumaElementow += tab1[i];
     }
-    printf("\nSuma elementow w tablicy 1 to %d\n",sumaElementow);
+    printf("Suma elementow w tablicy 1 to %d\n",sumaElementow);
     
-    int tab2[10] = {2,4,6,8,10,12,14,16,18,20};
+    
+    int i;
+    for(i=size-1;i>=0;i--)
+    printf("%d", tab[i])
+    
+     int tab2[10];
     int j;
     int rozmiarTablicy2;
     rozmiarTablicy2 = sizeof(tab2)/sizeof(int);
-    printf("Rozmiar tablicy 2 to %d\n",rozmiarTablicy2);
+    printf("\nRozmiar tablicy 2 to %d\n",rozmiarTablicy2);
     
     int sumaElementow2=0;
     for(j=0;j<rozmiarTablicy2;j++){
         sumaElementow2 += tab2[j];
     }
-    printf("\nSuma elementow w tablicy 2 to %d\n",sumaElementow2);
+    printf("Suma elementow w tablicy 2 to %d\n",sumaElementow2);
      return 0;
 }
