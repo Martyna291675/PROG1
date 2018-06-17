@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int
+main ()
+{
+  int dlugosc;
+  float metry;
+  float mile;
+  printf ("500 metrow to 0.31 mili\n");
+  printf ("1000 metrow to 0.62 mili\n");
+  printf ("1500 metrow to 0.93 mili\n");
+  printf ("2000 metrow to 1.24 mili\n");
+
+  char taknie = 'n';
+  while (taknie = 'y')
+    {
+      printf
+	("Wpisz 0 aby przeliczyc mile na metry; wybierz 1 aby przeliczyc metry na mile: ");
+      scanf ("\n%d", &dlugosc);
+      printf ("\nwpisz wartosc: ");
+      scanf ("%f", &metry);
+      if (dlugosc == 0)
+	{
+	  mile = metry * 1609.344;
+	  printf ("%.2f mile to %.2f metrow", metry, mile);
+
+	}
+      else if (dlugosc == 1)
+	{
+	  mile = metry / 1609.344;
+	  printf ("%.2f metrow to %.2f mil\n", metry, mile);
+	}
+      printf ("\nCzy chcesz kontynuowac? (Y/N)\n");
+      scanf (" %c", &taknie);
+      if ((taknie == 'n') || (taknie == 'N'))
+	{
+	  printf ("koniec Programu");
+	  return 0;
+	}
+    }
+}
