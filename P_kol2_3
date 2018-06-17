@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
+
+int sumaElementow(int tab[], int rozmiar)
+{
+    int i;
+    int sum=0;
+    for (i = 0 ; i < rozmiar ; i++)
+        sum = sum + tab[i];
+    return sum;
+}
+
+void show_tab(int tab[], int rozmiar)
+{
+    int i;
+    printf("FIFO tab: ");
+    for ( i = 0 ; i < rozmiar ; i ++)
+        printf("%d ", tab[i]);
+    printf("\n");
+}
+
+int min(int tab[], int rozmiar)
+{
+    int temp = INT_MAX, i;
+    for (i = 0 ; i < rozmiar ; i++)
+        if (tab[i]<temp)
+            temp = tab[i];
+    return temp;
+}
+
+int max(int tab[], int rozmiar)
+{
+    int temp = INT_MIN, i;
+    for (i = 0 ; i < rozmiar ; i++)
+        if (tab[i]>temp)
+            temp = tab[i];
+    return temp;
+}
+
+int main()
+{
+    int tab[10], sum = 0;
+    int i;
+    int range = 300;
+    int rozmiar = sizeof(tab)/sizeof(int);
+    for (i = 0 ; i < rozmiar ; i++)
+    {
+        tab[i] = rand() % range + 1;
+    }
+    show_tab(tab, rozmiar);
+    printf("Element najmniejszy: %d\n", min(tab, rozmiar));
+    printf("Element najwiekszy: %d\n", max(tab, rozmiar));
+    printf ("Suma elementow: %d\n", sumaElementow(tab,rozmiar));
+
+    return 0;
+}
